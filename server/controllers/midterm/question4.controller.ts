@@ -11,9 +11,9 @@ export class Question4Controller {
 
   //add your endpoint here!
   @Get('/users')
-  async users(){
-    const users = this.usersService.findAll();
-    return users;
+  async getAllUsers(){
+    const users = await this.usersService.findAll();
+    return {users};
   }
 
 }
