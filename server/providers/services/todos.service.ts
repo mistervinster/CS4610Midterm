@@ -13,4 +13,16 @@ export class TodosService {
   findAll() {
     return this.todosRepository.find();
   }
+
+  findById(id: number){
+    return this.todosRepository.findOne(id);
+  }
+
+  createTodo(todo: Todo){
+    return this.todosRepository.save(todo);
+  }
+
+  updateTodo(todo: Todo){
+    return this.todosRepository.update(todo.id,todo);
+  }
 }
