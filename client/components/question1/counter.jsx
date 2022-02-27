@@ -1,11 +1,8 @@
 import { Button } from '../common/button';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // stole the button from the starter app
 export const Counter = ({min,max}) => {
     const [count, setCount] = useState(0);
-    useEffect(()=>{
-
-    });
     const minus = () => {
         if (count == min) return;
         else {setCount(count-1);}
