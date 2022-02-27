@@ -17,7 +17,7 @@ export const Counter = ({min,max}) => {
     if (min > 0 && count === 0) setCount(min);
     if (max < 0 && count === 0) setCount(max);
     return (
-        <div className="p-4">
+        <div className="border-2 rounded p-4">
             <div className="content-center">{count}</div>
             <Button onClick={minus}>-</Button>
             <Button onClick={plus}>+</Button>
